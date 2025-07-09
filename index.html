@@ -36,6 +36,36 @@
   #header {
 	  border-bottom-color: #0096c7;
   }
+
+  .about-me-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .profile-pic {
+    border-radius: 50%;
+    width: 175px;
+    height: 175px;
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+
+  @media screen and (max-width: 736px) {
+    #banner {
+      flex-direction: column-reverse;
+    }
+    #banner .image {
+      margin: 0 0 2em 0;
+      width: 100%;
+    }
+    .about-me-container {
+      flex-direction: column;
+    }
+    .profile-pic {
+      margin-right: 0;
+      margin-bottom: 2em;
+    }
+  }
 </style>
 	</head>
 	<body class="is-preload">
@@ -88,8 +118,8 @@
 		<h2>Sobre Mim</h2>
 	</header>
 
-	<div style="display: flex; align-items: center;">
-    <img src="images/eu.jpeg" alt="Perfil" style="border-radius: 50%; width: 175px; height: 175px; margin-right: 20px;">
+	<div class="about-me-container">
+    <img src="images/eu.jpeg" alt="Perfil" class="profile-pic">
     <div>
       <p style="text-align: justify;">Meu nome é Rafael da Silva Leites, tenho formação técnica em Informática e Administração. Sou aluno de graduação no curso de Ciência da Computação na Universidade de Fortaleza e
         atualmente, trabalho como técnico em informática, prestando serviços para resolver problemas técnicos como: instalação e configuração de software, montagem e manutenção de hardware, suporte ao usuário, instalação e manutenção de redes e etc.
