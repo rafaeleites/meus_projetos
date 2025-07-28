@@ -984,6 +984,18 @@ hr {
           margin-top: -3em; }
           .row.gtr-200.gtr-uniform > * {
             padding-top: 3em; } }
+  @media screen and (max-width: 768px) {
+  #modal-hipermercado div {
+    width: 90%; /* Ajusta a largura do modal */
+    height: auto; /* Permite altura dinâmica */
+    padding: 10px; /* Reduz o padding */
+  }
+
+  #modal-hipermercado iframe {
+    width: 100%; /* Ajusta a largura do iframe */
+    height: 400px; /* Define uma altura menor para o iframe */
+  }
+}
 
 /* Section/Article */
 section.special, article.special {
