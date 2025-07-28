@@ -221,11 +221,10 @@
 										<article>
 											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
 											<h3>Análise de desempenho de hipermercado.</h3>
-											<p style="text-align: justify;"> A empresa varejista enfrenta desafios para identificar 
-												seus produtos mais rentáveis, entender as tendências de vendas ao longo do tempo e 
-												otimizar o desempenho de suas diferentes regiões de operação. 
-												Sem uma compreensão clara desses fatores, a alocação de recursos de marketing, 
-												estoque e gestão de pessoal pode ser ineficiente, impactando a receita e a lucratividade geral.
+											<p style="text-align: justify;"> A empresa varejista enfrenta o desafio contínuo de maximizar sua performance e otimizar 
+												 alocação de recursos em um mercado dinâmico. Historicamente, a falta de uma compreensão aprofundada sobre o comportamento
+												  de compra dos clientes, as tendências de vendas ao longo do tempo e a rentabilidade por linha de produto e região tem impactado 
+												  a eficiência de marketing, gestão de estoque e planejamento logístico.
 											</p>
 											<h4>Ferramentas utilizadas</h4>
 											<ul>
@@ -234,7 +233,7 @@
 												<li>Git e GitHub: Para controle do código</li>
 											</ul>
 											<ul class="actions">
-												<li><a href="#" class="button">Saiba Mais</a></li>
+												<li><a href="#" class="button" data-target="modal-hipermercado">Saiba Mais</a></li>
 											</ul>
 										</article>
 										<article>
@@ -323,3 +322,41 @@
 
 	</body>
 </html>
+
+<!-- Modal para exibir o projeto do Power BI -->
+<div id="modal-hipermercado" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 1000;">
+    <div style="position: relative; margin: 5% auto; padding: 20px; width: 80%; background: white; border-radius: 8px;">
+        <span id="close-modal" style="position: absolute; top: 10px; right: 20px; font-size: 24px; cursor: pointer;">&times;</span>
+        <h2>Projeto Hipermercado</h2>
+        <div style="width: 100%; height: 836px; text-align: center;">
+            <iframe 
+                title="projeto hipermercado" 
+                width="950" 
+                height="800" 
+                src="https://app.powerbi.com/view?r=eyJrIjoiNDJiZjBkZWYtM2Q1Yy00Y2NkLWJkMzQtOTc5MjE4ZWVlYjQ4IiwidCI6ImIzNGMxZDU1LWE0M2UtNGEyMC05MjE4LWExYTQyZWFiMTQ5YSJ9" 
+                frameborder="0" 
+                allowFullScreen="true">
+            </iframe>  
+        </div>
+    </div>
+</div>
+
+<script>
+    // Abrir o modal
+    document.querySelector('.button[data-target="modal-hipermercado"]').addEventListener('click', function() {
+        document.getElementById('modal-hipermercado').style.display = 'block';
+    });
+
+    // Fechar o modal
+    document.getElementById('close-modal').addEventListener('click', function() {
+        document.getElementById('modal-hipermercado').style.display = 'none';
+    });
+
+    // Fechar o modal ao clicar fora dele
+    window.addEventListener('click', function(event) {
+        const modal = document.getElementById('modal-hipermercado');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+</script>

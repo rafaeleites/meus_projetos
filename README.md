@@ -28,6 +28,6 @@ Este portfólio demonstra minhas habilidades em resolver problemas de negócios 
 
 ## Contato
 
-- Email: rafaelleites96@outlook.com
+- rafaelleites96@outlook.com
 - [LinkedIn](http://www.linkedin.com/in/rafaeleites)
 - [Medium](https://medium.com/@rafaeleites)
