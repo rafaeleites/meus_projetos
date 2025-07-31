@@ -221,10 +221,10 @@
 										<article>
 											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
 											<h3>Análise de desempenho de hipermercado.</h3>
-											<p style="text-align: justify;"> A empresa varejista enfrenta o desafio contínuo de maximizar sua performance e otimizar 
-												 alocação de recursos em um mercado dinâmico. Historicamente, a falta de uma compreensão aprofundada sobre o comportamento
-												  de compra dos clientes, as tendências de vendas ao longo do tempo e a rentabilidade por linha de produto e região tem impactado 
-												  a eficiência de marketing, gestão de estoque e planejamento logístico.
+											<p style="text-align: justify;"> A empresa varejista busca superar desafios relacionados à maximização de desempenho e 
+												otimização de recursos em um mercado competitivo. A ausência de uma análise detalhada sobre o comportamento de compra dos clientes, 
+												sazonalidade das vendas e rentabilidade por categoria e região tem limitado a eficácia de estratégias de marketing, gestão de estoque e 
+												logística. Este projeto visa preencher essas lacunas, fornecendo insights estratégicos para decisões baseadas em dados.
 											</p>
 											<h4>Ferramentas utilizadas</h4>
 											<ul>
@@ -233,7 +233,8 @@
 												<li>Git e GitHub: Para controle do código</li>
 											</ul>
 											<ul class="actions">
-												<li><a href="#" class="button" data-target="modal-hipermercado">Saiba Mais</a></li>
+												<li><a href="#" class="button" data-target="modal-hipermercado">Dashboard</a></li>
+												<li><a href="https://github.com/rafaeleites/repositorio/tree/main/analise-de-dados/projeto1" class="button" target="_blank">GitHub</a></li>
 											</ul>
 										</article>
 										<article>
@@ -250,7 +251,8 @@
 													<li>Git e GitHub: Para controle do código</li>
 												</ul>
 											<ul class="actions">
-												<li><a href="#" class="button">Saiba Mais</a></li>
+												<li><a href="#" class="button">Dashboard </a></li>
+												<li><a href="https://github.com/rafaeleites/repositorio/tree/main/analise-de-dados/projeto2" class="button" target="_blank">GitHub</a></li>
 											</ul>
 										</article>
 										<article>
@@ -268,7 +270,8 @@
 												<li>Git e GitHub: Para controle do código</li>
 											</ul>
 											<ul class="actions">
-												<li><a href="#" class="button">Saiba Mais</a></li>
+												<li><a href="#" class="button" data-target="modal-vicio-redes-sociais">Dashboard</a></li>
+												<li><a href="https://github.com/rafaeleites/repositorio/tree/main/analise-de-dados/projeto2" class="button" target="_blank">GitHub</a></li>
 											</ul>
 										</article>
 										<article>
@@ -285,7 +288,8 @@
 													<li>Git e GitHub: Para controle do código</li>
 												</ul>
 											<ul class="actions">
-												<li><a href="#" class="button">Saiba Mais</a></li>
+												<li><a href="#" class="button">Dashboard</a></li>
+												<li><a href="https://github.com/rafaeleites/repositorio/tree/main/analise-de-dados/projeto4" class="button" target="_blank">GitHub</a></li>
 											</ul>
 										</article>
 									</div>
@@ -331,7 +335,7 @@
         <div style="width: 100%; height: 836px; text-align: center;">
             <iframe 
                 title="projeto hipermercado" 
-                width="950" 
+                width="900" 
                 height="800" 
                 src="https://app.powerbi.com/view?r=eyJrIjoiNDJiZjBkZWYtM2Q1Yy00Y2NkLWJkMzQtOTc5MjE4ZWVlYjQ4IiwidCI6ImIzNGMxZDU1LWE0M2UtNGEyMC05MjE4LWExYTQyZWFiMTQ5YSJ9" 
                 frameborder="0" 
@@ -355,6 +359,44 @@
     // Fechar o modal ao clicar fora dele
     window.addEventListener('click', function(event) {
         const modal = document.getElementById('modal-hipermercado');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+</script>
+
+<!-- Modal para exibir o projeto de vício em redes sociais -->
+<div id="modal-vicio-redes-sociais" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 1000;">
+    <div style="position: relative; margin: 5% auto; padding: 20px; width: 80%; background: white; border-radius: 8px;">
+        <span id="close-modal-vicio" style="position: absolute; top: 10px; right: 20px; font-size: 24px; cursor: pointer;">&times;</span>
+        <h2>Projeto Vício em Redes Sociais</h2>
+        <div style="width: 100%; height: 836px; text-align: center;">
+            <iframe 
+                title="Vicio em Redes Sociais" 
+                width="900" 
+                height="800" 
+                src="https://app.powerbi.com/view?r=eyJrIjoiZTAwZTkxMDctZGU1ZS00MWFlLTg0MGItYjBjNmFkZjlmODFkIiwidCI6ImIzNGMxZDU1LWE0M2UtNGEyMC05MjE4LWExYTQyZWFiMTQ5YSJ9" 
+                frameborder="0" 
+                allowFullScreen="true">
+            </iframe>  
+        </div>
+    </div>
+</div>
+
+<script>
+    // Abrir o modal
+    document.querySelector('.button[data-target="modal-vicio-redes-sociais"]').addEventListener('click', function() {
+        document.getElementById('modal-vicio-redes-sociais').style.display = 'block';
+    });
+
+    // Fechar o modal
+    document.getElementById('close-modal-vicio').addEventListener('click', function() {
+        document.getElementById('modal-vicio-redes-sociais').style.display = 'none';
+    });
+
+    // Fechar o modal ao clicar fora dele
+    window.addEventListener('click', function(event) {
+        const modal = document.getElementById('modal-vicio-redes-sociais');
         if (event.target === modal) {
             modal.style.display = 'none';
         }
